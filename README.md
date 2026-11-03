@@ -43,11 +43,11 @@ Combined, these two restrictions reduce perceived Bluetooth headphone loudness b
 ## 📂 Repository Structure
 
 ```text
-├── Xiaomi17Pro_BT_Ses_Modu_APatch_Magisk.zip   # Flashable module for APatch / Magisk / KernelSU
-├── Kurulum_Yap.bat                             # One-click Windows ADB installer (no reboot required)
-├── Orijinale_Don.bat                           # One-click Windows ADB uninstaller (restores factory stock)
+├── pandora_btaudiofix.zip                      # Flashable module for APatch / Magisk / KernelSU
+├── setup.bat                                   # One-click Windows ADB installer (no reboot required)
+├── reset.bat                                   # One-click Windows ADB uninstaller (restores factory stock)
 ├── audio_policy_engine_stream_volumes_mi.xml   # Patched AudioPolicy volume curves configuration
-└── modul_dosyalari/                            # Module source files (post-fs-data.sh, service.sh, module.prop)
+└── module/                                     # Module source files (post-fs-data.sh, service.sh, module.prop)
 ```
 
 ---
@@ -61,17 +61,17 @@ Combined, these two restrictions reduce perceived Bluetooth headphone loudness b
 ---
 
 ### Method 1: Flash via APatch / Magisk / KernelSU (Recommended)
-1. Download **`Xiaomi17Pro_BT_Ses_Modu_APatch_Magisk.zip`** to your phone.
+1. Download **`pandora_btaudiofix.zip`** to your phone.
 2. Open your root manager (**APatch / Magisk / KernelSU**).
-3. Go to the **Modules (`APModule`)** tab, tap **Install**, and select the downloaded `.zip` file.
+3. Go to the **Modules (`APModule`)** tab, tap **Install**, and select **`pandora_btaudiofix.zip`**.
 4. **Reboot** your device.
 
 ---
 
-### Method 2: One-Click Windows ADB Installer (`Kurulum_Yap.bat`)
+### Method 2: One-Click Windows ADB Installer (`setup.bat`)
 1. Clone or download this repository to your PC.
 2. Connect your phone via USB with USB Debugging enabled.
-3. Double-click **`Kurulum_Yap.bat`**.
+3. Double-click **`setup.bat`**.
 4. The script automatically installs the module into `/data/adb/modules/xiaomi17pro_bt_audio_fix`, bind-mounts `/odm/etc/audio_policy_engine_stream_volumes_mi.xml`, disables `MusicFX`/`MiSound`, and restarts `audioserver` (**takes effect immediately without rebooting**).
 
 ---
@@ -79,7 +79,7 @@ Combined, these two restrictions reduce perceived Bluetooth headphone loudness b
 ## 🔄 Uninstallation (Restore Factory Stock)
 
 - **On Phone:** Remove the module from the APatch / Magisk / KernelSU app and reboot. Because this modification is completely systemless (`mount -o bind`), your original `/odm` partition remains untouched.
-- **From PC:** Connect your phone via USB and double-click **`Orijinale_Don.bat`** to immediately restore factory settings.
+- **From PC:** Connect your phone via USB and double-click **`reset.bat`** to immediately restore factory settings.
 
 ---
 

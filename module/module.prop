@@ -1,0 +1,6 @@
+id=xiaomi17pro_bt_audio_fix
+name=Xiaomi 17 Pro (pandora) BT Audio Fix
+version=v2.0
+versionCode=20
+author=xopess
+description=Removes EU Bluetooth volume cap (-6.5dB CE + -10dB MusicFX) on Xiaomi 17 Pro (pandora). Keeps internal phone speakers at 100% factory stock.
