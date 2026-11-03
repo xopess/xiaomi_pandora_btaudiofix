@@ -1,0 +1,6 @@
+id=xiaomi17pro_bt_audio_fix
+name=Xiaomi 17 Pro Bluetooth Ses Yukseltme Modulu
+version=v2.0
+versionCode=20
+author=gokse
+description=Xiaomi 17 Pro (pandora) icin AB Bluetooth ses sinirini (-6.5dB CE + -10dB MusicFX) kaldirir. Telefonun kendi hoparlorune dokunmaz.
